@@ -44,6 +44,36 @@
       padding: 1rem;
       margin-bottom: 1rem;
       border-radius: 10px;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .feature-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    .feature-detail {
+      font-size: 0.95rem;
+      color: #aaa;
+      margin-top: 0.5rem;
+      max-height: 0;
+      opacity: 0;
+      transition: max-height 0.4s ease, opacity 0.4s ease;
+      overflow: hidden;
+    }
+
+    .features li:hover {
+      background: #2a2a2a;
+      transform: scale(1.02);
+    }
+
+    .features li:hover .feature-detail {
+      max-height: 200px;
+      opacity: 1;
     }
 
     footer {
@@ -79,9 +109,18 @@
   <section class="features">
     <h2>Features</h2>
     <ul>
-      <li><strong>Exercise Mode</strong> – Stay fit while staying still.</li>
-      <li><strong>Travel Mode</strong> – Let it carry you.</li>
-      <li><strong>App Control</strong> – Customize every detail — from color to speed.</li>
+      <li>
+        <div class="feature-title">Exercise Mode</div>
+        <div class="feature-detail">Move in place while staying in one spot. Great for health & fun at the same time.</div>
+      </li>
+      <li>
+        <div class="feature-title">Travel Mode</div>
+        <div class="feature-detail">Go across campus, workspaces, or outdoors smoothly while letting Robo-Walk do the work.</div>
+      </li>
+      <li>
+        <div class="feature-title">App Control</div>
+        <div class="feature-detail">Full customization through the NanoTech app: speed, lights, themes, security, and more.</div>
+      </li>
     </ul>
   </section>
 
