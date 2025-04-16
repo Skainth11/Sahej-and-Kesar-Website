@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Robo-Walk | NanoTech</title>
+  <title>Robo-Walk Info</title>
   <style>
     body {
       margin: 0;
-      font-family: 'Helvetica Neue', sans-serif;
+      font-family: 'Segoe UI', sans-serif;
       background: #0f0f0f;
       color: #fff;
     }
@@ -19,59 +19,56 @@
     }
 
     header h1 {
-      font-size: 3rem;
+      font-size: 2.5rem;
       margin: 0;
+      color: #00ffff;
     }
 
     header p {
-      font-size: 1.2rem;
-      color: #aaa;
+      margin-top: 0.5rem;
+      color: #ccc;
     }
 
-    section {
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
       padding: 2rem;
-      max-width: 900px;
+      max-width: 1200px;
       margin: auto;
     }
 
-    .features ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .features li {
+    .info-card {
       background: #1a1a1a;
-      padding: 1rem;
-      margin-bottom: 1rem;
       border-radius: 10px;
-      transition: all 0.3s ease;
+      padding: 1.5rem;
       position: relative;
       overflow: hidden;
       cursor: pointer;
+      transition: transform 0.3s ease;
     }
 
-    .feature-title {
-      font-size: 1.2rem;
-      font-weight: bold;
-      color: #fff;
-    }
-
-    .feature-detail {
-      font-size: 0.95rem;
-      color: #aaa;
-      margin-top: 0.5rem;
-      max-height: 0;
-      opacity: 0;
-      transition: max-height 0.4s ease, opacity 0.4s ease;
-      overflow: hidden;
-    }
-
-    .features li:hover {
+    .info-card:hover {
+      transform: scale(1.03);
       background: #2a2a2a;
-      transform: scale(1.02);
     }
 
-    .features li:hover .feature-detail {
+    .info-title {
+      font-size: 1.4rem;
+      font-weight: bold;
+    }
+
+    .info-detail {
+      font-size: 1rem;
+      color: #aaa;
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: max-height 0.5s ease, opacity 0.5s ease;
+      margin-top: 1rem;
+    }
+
+    .info-card:hover .info-detail {
       max-height: 200px;
       opacity: 1;
     }
@@ -79,65 +76,54 @@
     footer {
       text-align: center;
       padding: 2rem;
-      background: #1a1a1a;
       font-size: 0.9rem;
+      background: #1a1a1a;
       color: #888;
-    }
-
-    footer .socials a {
-      color: #888;
-      text-decoration: none;
-      margin: 0 0.5rem;
     }
   </style>
-  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 </head>
 <body>
+
   <header>
-    <h1>Robo-Walk</h1>
-    <p>Rethink Walking</p>
+    <h1>Discover Robo-Walk</h1>
+    <p>The smartest way to walk, run, and roll — without leaving your spot.</p>
   </header>
 
-  <section id="viewer">
-    <model-viewer src="ROBOWALK 3D Model.glb" 
-      alt="Robo-Walk 3D Model"
-      auto-rotate camera-controls ar
-      style="width: 100%; height: 500px;">
-    </model-viewer>
-  </section>
+  <section class="info-grid">
+    <div class="info-card">
+      <div class="info-title">What is Robo-Walk?</div>
+      <div class="info-detail">Robo-Walk is a wearable robotic treadmill that lets you move naturally in place — perfect for gaming, fitness, and remote exploration.</div>
+    </div>
 
-  <section class="features">
-    <h2>Features</h2>
-    <ul>
-      <li>
-        <div class="feature-title">Exercise Mode</div>
-        <div class="feature-detail">Move in place while staying in one spot. Great for health & fun at the same time.</div>
-      </li>
-      <li>
-        <div class="feature-title">Travel Mode</div>
-        <div class="feature-detail">Go across campus, workspaces, or outdoors smoothly while letting Robo-Walk do the work.</div>
-      </li>
-      <li>
-        <div class="feature-title">App Control</div>
-        <div class="feature-detail">Full customization through the NanoTech app: speed, lights, themes, security, and more.</div>
-      </li>
-    </ul>
-  </section>
+    <div class="info-card">
+      <div class="info-title">Travel Mode</div>
+      <div class="info-detail">Navigate your environment with ease — glide across campuses, offices, or convention floors using your body’s natural stride.</div>
+    </div>
 
-  <section class="schools">
-    <h2>Perfect for Schools</h2>
-    <p>No more crowded hallways. Just smooth rides.</p>
+    <div class="info-card">
+      <div class="info-title">Exercise Mode</div>
+      <div class="info-detail">Burn calories in a small space. Use Robo-Walk to simulate long-distance walks, jogs, or runs — all while staying in one spot.</div>
+    </div>
+
+    <div class="info-card">
+      <div class="info-title">App Control</div>
+      <div class="info-detail">Use our mobile app to control speed, switch modes, customize lighting, and track your performance stats in real-time.</div>
+    </div>
+
+    <div class="info-card">
+      <div class="info-title">Rechargeable Battery</div>
+      <div class="info-detail">With up to 5 hours of battery life and fast USB-C charging, Robo-Walk is ready for all-day adventures or workouts.</div>
+    </div>
+
+    <div class="info-card">
+      <div class="info-title">Built for the Future</div>
+      <div class="info-detail">From VR compatibility to AI-assisted movement correction, Robo-Walk is built to evolve with the next generation of motion tech.</div>
+    </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 NanoTech. All rights reserved.</p>
-    <div class="socials">
-      <a href="#">Instagram</a> | <a href="#">X</a> | <a href="#">Facebook</a>
-    </div>
+    &copy; 2025 NanoTech | Robo-Walk
   </footer>
 
-  <script>
-    console.log("Robo-Walk site loaded.");
-  </script>
 </body>
 </html>
